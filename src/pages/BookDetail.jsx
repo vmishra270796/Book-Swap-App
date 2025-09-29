@@ -36,7 +36,7 @@ export default function BookDetail() {
         {book.images?.length > 0 && (
           <div className="d-flex gap-2 p-2 flex-wrap">
             {book.images.map((src, idx) => (
-              <img key={idx} src={`http://localhost:4000${src}`} alt={`${book.title}-${idx}`} style={{ maxHeight: 180 }} />
+              <img key={idx} src={`${import.meta.env.VITE_API_FILE_URL}${src}`} alt={`${book.title}-${idx}`} style={{ maxHeight: 180 }} />
             ))}
           </div>
         )}

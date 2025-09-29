@@ -30,7 +30,7 @@ export default function MyListings() {
           <div key={b._id} className="col-md-4 mb-3">
             <Card>
               {b.images?.length > 0 && (
-                <img src={`http://localhost:4000${b.images[0]}`} alt={b.title} className="img-fluid" />
+                <img src={`${import.meta.env.VITE_API_FILE_URL}${b.images[0]}`} alt={b.title} className="img-fluid" />
               )}
               <CardBody>
                 <CardTitle tag="h5">{b.title}</CardTitle>

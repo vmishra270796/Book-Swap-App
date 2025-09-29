@@ -86,7 +86,7 @@ export default function BrowseBooks() {
             <Card>
               {b.images?.length > 0 && (
                 <img
-                  src={`http://localhost:4000${b.images[0]}`}
+                  src={`${import.meta.env.VITE_API_FILE_URL}${b.images[0]}`}
                   alt={b.title}
                   className="img-fluid"
                 />
